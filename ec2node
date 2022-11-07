@@ -1,3 +1,7 @@
+## Util for quering nodes by their ec2 instance id - for debugging and stuff
+# 
+# Usage: ec2node describe i-04f7ed3c8****** 
+
 #!/bin/zsh
 
 privateip=$(aws ec2 describe-instances --instance-id $2 | jq -r '.Reservations[].Instances[].PrivateIpAddress')
